@@ -1,5 +1,16 @@
 # Integration of Nbgrader with Canvas
 
+## Preparation
+
+nbgrader_config.py has to be configured with a regex expression suitable for
+Canvas download files:
+
+    #  For named group regular expression examples see
+    #  https://docs.python.org/howto/regex.html
+    c.FileNameCollectorPlugin.named_regexp = \
+        r'.*[/\][a-z]+_(?P<student_id>\d+)_(\d+)_(?P<file_id>.*)'
+
+
 ## create assignment
 
 ## create student version
